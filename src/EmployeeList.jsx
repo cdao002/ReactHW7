@@ -85,16 +85,16 @@ class EmployeeRow extends React.Component {
           <td><Button variant="danger" size="sm" onClick={this.toggleModal}>X</Button></td>
         </tr>
           
-          <Modal show={this.state.modalVisible} onHide = {this.handleHideModal} centered>
-            <Modal.Header closeButton onHide={this.toggleModal}>
+          <Modal show={this.state.modalVisible} onHide = {this.toggleModal} centered>
+            <Modal.Header closeButton>
               <Modal.Title>Delete Employees?</Modal.Title>
             </Modal.Header>
             <Modal.Body>
               Are you sure you want to delete this employee? 
             </Modal.Body>
             <Modal.Footer>
-              <td><Button variant="danger" size="sm" onClick={this.toggleModal}>Cancel</Button></td>
-              <td><Button variant="success" size="sm" onClick={this.handlenDeleteClick}>Yes</Button></td>
+              <td><Button type="submit" variant="danger" size="sm" onClick={this.toggleModal}>Cancel</Button></td>
+              <td><Button type = "submit" variant="success" size="sm" onClick={this.handlenDeleteClick}>Yes</Button></td>
             </Modal.Footer>
 
           </Modal>
